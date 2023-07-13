@@ -122,7 +122,7 @@ fn Component(cx: Scope) -> Element {
         // You can also use the modify function
         counter.modify(|counter| counter + 1);
 
-        // You can also use the with_mut function
+        // Or the with_mut function
         counter.modify(|counter| *counter += 1);
     };
 
@@ -188,7 +188,7 @@ enum Theme {
 
 fn App(cx: Scope) -> Element {
     // All the children of this component will have access to this shared state
-    // See `use_shared_state` on how to actually read it
+    // See `use_shared_state` on how to actually use it
     use_shared_state_provider(cx, || Theme::Dark);
 
     render!(
@@ -199,7 +199,7 @@ fn App(cx: Scope) -> Element {
 
 #### `use_shared_state`
 
-You can use `use_shared_state` to share a certain value all the way down to it's children. 
+You can use `use_shared_state` to access a shared value by one of the component ancestors.
 
 ```rust
 
@@ -210,13 +210,14 @@ enum Theme {
 }
 
 fn CoolChild(cx: Scope) -> Element {
-    // We can know access the shared state that was provided by the parent
+    // Access the shared state
     let theme = use_shared_state::<Theme>(cx);
 
     // You can read it with the read function
     let is_light = theme.read() == Theme::Light;
 
     let onclick = |_| {
+        // Or modify it with the write function
         theme.write() = match theme.read() {
             Theme::Light => Theme::Dark,
             Theme::Dark => Theme::Light
@@ -367,7 +368,7 @@ Optional props:
 ```rust
 
 #[derive(Props)]
-struct CoolProps<'a> {
+struct CoolProps {
     #[props(optional)]
     value: Option<i32>,
 }
