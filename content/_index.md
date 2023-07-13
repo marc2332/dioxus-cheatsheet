@@ -83,7 +83,14 @@ The function takes a `Scope` as an argument and returns an `Element`.
 RSX is a special syntax used to declare the UI that integrates with Rust.
 
 ```rust
-fn Component(cx: Scope) -> Element {
+fn app(cx: Scope) -> Element {
+    render!(
+        div {} // A div element
+        Component {} // The `CoolComponent` component
+    )
+}
+
+fn CoolComponent(cx: Scope) -> Element {
     let some_value = 123;
 
     render!(
