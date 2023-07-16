@@ -213,7 +213,7 @@ fn App(cx: Scope) -> Element {
 
 #### `use_shared_state`
 
-You can use `use_shared_state` to access a shared value by one of the component ancestors.
+You can use `use_shared_state` to access a value shared by one of the component ancestors.
 
 ```rust
 
