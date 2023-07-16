@@ -1,5 +1,5 @@
 +++
-title = "🦀 Dioxus Framework Cheatsheet"
+title = "🦀 Dioxus Library Cheatsheet"
 insert_anchor_links = "left"
 in_search_index = true
 +++
@@ -12,6 +12,7 @@ in_search_index = true
 - [Components](#components)
 - [Props](#props)
 - [RSX](#rsx)
+- ⚠️ Lifecycle
 
 **State**
 
@@ -28,6 +29,11 @@ in_search_index = true
 
 <column>
 
+**Patterns**
+
+- [Composition](#composition)
+- [Memoization](#memoization)
+
 **Dioxus Standard Library**
 
 - ⚠️ Color Scheme
@@ -41,12 +47,9 @@ in_search_index = true
 - ⚠️ TUI
 - ⚠️ Blitz
 - ⚠️ Liveview
+- ⚠️ SSR
+- ⚠️ Fullstack
 - ⚠️ Freya
-
-**Patterns**
-
-- [Composition](#composition)
-- [Memoization](#memoization)
 
 </column>
 </toc>
@@ -56,7 +59,7 @@ in_search_index = true
 
 ### Overview
 
-**Dioxus** is a declarative library for building user interfaces (UI) in Rust 🦀. It is inspired by React, so it shares many of it's concepts like **Components** and **Hooks**. Dioxus is renderer agnostic, so you can use it with any renderer that is available, for instance, there are renderers for web (WASM), Desktop (Webview), TUI, Blitz (WGPU), LiveView, Freya (non-official Skia renderer).
+**Dioxus** is a declarative library for building user interfaces (UI) in Rust 🦀. It is inspired by React, so it shares many of it's concepts like **Components** and **Hooks**. Dioxus is renderer agnostic, so you can use it with any renderer that is available, for example, there are renderers for web (WASM), Desktop (Webview), TUI, Blitz (WGPU), LiveView, Freya (non-official Skia renderer), etc.
 
 ### Components
 
