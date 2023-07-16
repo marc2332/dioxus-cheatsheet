@@ -14,13 +14,20 @@
 
 .title {
     text-align: center;
-    margin: 60px 0px;
+    margin-top: 60px;
+    margin-bottom: 30px;
     font-size: 40px;
 }
 
 .subtitle {
     text-align: center;
-    margin: 40px 0px;
+    margin: 20px 0px;
+}
+
+.small-subtitle {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 40px;
 }
 
 a {
